@@ -42,13 +42,16 @@ function TodoList() {
     const newTodos = [...todos];
     newTodos.splice(index, 1);
     setTodos(newTodos);
-  };
+    };
 
     const editTodo = index => {
-        const newTodos = [...todos];
-        newTodos[index].text = prompt("Edit Todo", newTodos[index].text);
+      const newTodos = [...todos];
+      const newText = prompt("Edit Todo", newTodos[index].text);
+      if (newText !== null) {
+        newTodos[index].text = newText;
         setTodos(newTodos);
-    }
+      }
+    };
 
   return (
     <>
