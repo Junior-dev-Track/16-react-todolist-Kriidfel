@@ -31,7 +31,7 @@ h1 {
   justify-content: space-around;
 }
 
-input{
+.newTodo{
     border: none;
     border-radius: 8px;
     font-size: 1em;
@@ -40,6 +40,10 @@ input{
     background-color: #1a1a1a;
     color: #fff;
 
+}
+
+path {
+  fill: #fff;
 }
 
 .add {
@@ -111,13 +115,49 @@ p{
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  .add {
     background-color: #f9f9f9;
+  }
+
+  .newTodo{
+
+    background-color: #f9f9f9;
+    color: #213547;
+    border-style: solid;
+  }
+
+  path {
+    fill: #213547;
+  }
+
+  .add {
+    background-color: #213547;
+  }
+
+  .check{
+    color-scheme: normal;
+    background-color: #f9f9f9;
+    /*color: #f9f9f9;*/
+  }
+  .edit{
+    background-color: #f9f9f9;
+    border: #f9f9f9;
+  }
+
+  .edit:hover{
+    border-radius: 8px;
+    background-color: #4d79ff;
+    border: #4d79ff;
+  }
+
+  .delete{
+    background-color: #f9f9f9;
+    border: #f9f9f9;
+  }
+
+  .delete:hover{
+    border-radius: 8px;
+    background-color: #ff4d4d;
+    border: #ff4d4d;
   }
 }
 
