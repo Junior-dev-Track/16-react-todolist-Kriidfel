@@ -47,7 +47,7 @@ function TodoList() {
     const editTodo = index => {
       const newTodos = [...todos];
       const newText = prompt("Edit Todo", newTodos[index].text);
-      if (newText !== null) {
+      if (newText !== null && newText.trim() !== ''){
         newTodos[index].text = newText;
         setTodos(newTodos);
       }
