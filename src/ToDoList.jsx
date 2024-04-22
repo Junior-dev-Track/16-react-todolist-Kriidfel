@@ -36,7 +36,7 @@ function ToDoList() {
         const newTodos = [...todos];
         const newText = prompt("Edit Todo", newTodos[todoIndex].text); // /!\ edit check id list not id todo
         if (newText !== null && newText.trim() !== ''){
-            newTodos[index].text = newText;
+            newTodos[todoIndex].text = newText;
             setTodos(newTodos);
         }
     };
