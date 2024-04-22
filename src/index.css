@@ -76,6 +76,12 @@ path {
   background-color: #4d79ff;
 }
 
+.edit[disabled]:hover{
+  border-radius: 8px;
+  background-color: #7c9df6;
+  cursor:not-allowed;
+}
+
 .delete{
   background-color: #242424;
   border: #242424;
