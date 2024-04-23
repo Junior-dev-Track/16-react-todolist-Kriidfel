@@ -98,6 +98,19 @@ path {
   cursor:not-allowed;
 }
 
+.editTodo{
+  border: none;
+  border-radius: 8px;
+  font-size: 1.5em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: #fff;
+  width: 200px;
+  margin: 1em 0;
+  padding: 0;
+}
+
 .allTodo {
   display: flex;
   flex-direction: column;
@@ -118,7 +131,6 @@ path {
   overflow-wrap: break-word;
   overflow: hidden;
   text-overflow: ellipsis;
-
 }
 
 .text.checked{
@@ -161,6 +173,12 @@ path {
     border-radius: 8px;
     background-color: #4d79ff;
     border: #4d79ff;
+  }
+
+  .editTodo{
+    background-color: #f9f9f9;
+    color: #213547;
+    border-style: solid;
   }
 
   .delete{
