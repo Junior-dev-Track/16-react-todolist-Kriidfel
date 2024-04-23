@@ -66,6 +66,52 @@ path {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.header-all{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 15%;
+}
+
+.header-check{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 33%;
+    padding-left: 25%;
+
+}
+
+.checkAll{
+  margin:  0;
+}
+
+.header-title {
+  width: 50%;
+}
+
+.header-counter {
+  height: 33%;
+  padding-right: 8%;
+}
+
+.count{
+  font-size: 0.5em;
+  padding: 3px;
+  border-style: solid;
+  border-radius: 8px;
+  border-width: 1.5px;
+  border-color: #646cff ;
+  background-color: #1a1a1a;
+}
+
 .edit{
   background-color: #242424;
   border: #242424;
@@ -80,6 +126,17 @@ path {
   border-radius: 8px;
   background-color: #7c9df6;
   cursor:not-allowed;
+}
+
+.validate{
+  background-color: #242424;
+  border: #242424;
+  height: 33%;
+}
+
+.validate:hover{
+  border-radius: 8px;
+  background-color: #3cb52e;
 }
 
 .delete{
@@ -98,6 +155,14 @@ path {
   cursor:not-allowed;
 }
 
+.editForm{
+  width: 287px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .editTodo{
   border: none;
   border-radius: 8px;
@@ -107,6 +172,7 @@ path {
   background-color: #1a1a1a;
   color: #fff;
   width: 200px;
+  height: 1.5em;
   margin: 1em 0;
   padding: 0;
 }
@@ -125,12 +191,13 @@ path {
   align-items: center;
 }
 
-.text{
-  width: 200px;
-  font-size: 1.5em;
-  overflow-wrap: break-word;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.text {
+    width: 200px;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    max-height: 3.6em;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .text.checked{
@@ -157,6 +224,14 @@ path {
   .add {
     color: #f9f9f9;
     background-color: #213547;
+  }
+
+  .count{
+    color: #f9f9f9;
+    background-color:  #6380B3;
+    border-style: solid ;
+    border-width: 1.5px;
+    border-color: #213547 ;
   }
 
   .check{
