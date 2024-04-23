@@ -2,6 +2,8 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  font-size: 20px;
+
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -17,9 +19,10 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  min-width: 720px;
   min-height: 100vh;
 }
+
 
 h1 {
   font-size: 3.2em;
@@ -32,13 +35,13 @@ h1 {
 }
 
 .newTodo{
-    border: none;
-    border-radius: 8px;
-    font-size: 1em;
-    font-weight: 500;
-    font-family: inherit;
-    background-color: #1a1a1a;
-    color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: #fff;
 
 }
 
@@ -81,16 +84,23 @@ path {
 }
 
 .header-check{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 33%;
-    padding-left: 25%;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 33%;
+  padding-left: 25%;
+  width: 100%;
 }
 
 .checkAll{
   margin:  0;
+
+}
+
+.check{
+  font-size: 1em;
+  transform: scale(1.5);
+  margin-left: 9px;
 }
 
 .header-title {
@@ -98,12 +108,11 @@ path {
 }
 
 .header-counter {
-  height: 33%;
   padding-right: 8%;
 }
 
 .count{
-  font-size: 0.5em;
+  font-size: 0.6em;
   padding: 3px;
   border-style: solid;
   border-radius: 8px;
@@ -156,7 +165,7 @@ path {
 }
 
 .editForm{
-  width: 287px;
+  width: 325px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -166,7 +175,7 @@ path {
 .editTodo{
   border: none;
   border-radius: 8px;
-  font-size: 1.5em;
+  font-size: 1.372em;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
@@ -192,12 +201,12 @@ path {
 }
 
 .text {
-    width: 200px;
-    font-size: 1.5em;
-    line-height: 1.2em;
-    max-height: 3.6em;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  width: 200px;
+  font-size: 1.5em;
+  line-height: 1.2em;
+  max-height: 3.6em;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .text.checked{
@@ -237,17 +246,17 @@ path {
   .check{
     color-scheme: normal;
     background-color: #f9f9f9;
-    /*color: #f9f9f9;*/
   }
   .edit{
     background-color: #f9f9f9;
-    border: #f9f9f9;
   }
 
   .edit:hover{
-    border-radius: 8px;
     background-color: #4d79ff;
-    border: #4d79ff;
+  }
+
+  .validate{
+    background-color: #f9f9f9;
   }
 
   .editTodo{

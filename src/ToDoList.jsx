@@ -94,7 +94,7 @@ function ToDoList() {
                 <div className={"header"}>
                     <div className={"header-all"}>
                         <div className={"header-check"}>
-                            <input type="checkbox" className={"checkAll"} id="checkAll" name="checkAll"  checked={allChecked}
+                            <input type="checkbox" className={"check"} id="checkAll" name="checkAll"  checked={allChecked}
                                    onChange={handleCheckAll}/>
                             <label>All</label>
                         </div>
