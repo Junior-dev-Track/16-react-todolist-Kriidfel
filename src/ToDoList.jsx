@@ -28,7 +28,6 @@ function ToDoList() {
                 return todo;
             });
 
-            // Check if all todos are checked
             const allChecked = newTodos.every(todo => todo.checked);
             setAllChecked(allChecked);
 
@@ -53,6 +52,7 @@ function ToDoList() {
         const newTodos = [...todos];
         newTodos.splice(todoIndex, 1);
         setTodos(newTodos);
+        // newTodos.filter(todo => todo.id !== index);
         if (newTodos.length === 0) {
             setAllChecked(false);
         }
@@ -70,45 +70,44 @@ function ToDoList() {
 
     const handleAdd = newTodo => {
         setTodos([...todos, {
-            id: new
-            Date().getTime(),
+            id: new Date().getTime(),
             text: newTodo,
             checked: false
         }]);
     }
-
-    useEffect(() => {
-        window.localStorage.setItem(LSKEY + ".todos", JSON.stringify(todos));
-    }, [todos]);
 
     function countUnCHeck() {
         const count=  todos.filter(todo => !todo.checked).length;
         return count.toString().padStart(2, '0');
     }
 
+    useEffect(() => {
+        window.localStorage.setItem(LSKEY + ".todos", JSON.stringify(todos));
+    }, [todos]);
+
     return (
         <>
-            <ToDoForm handleAdd = {handleAdd} />
-            <ul className={"allTodo"}>
+            <ToDoForm handleAdd={handleAdd}/>
 
-                <div className={"header"}>
-                    <div className={"header-all"}>
-                        <div className={"header-check"}>
-                            <input type="checkbox" className={"check"} id="checkAll" name="checkAll"  checked={allChecked}
-                                   onChange={handleCheckAll}/>
-                            <label>All</label>
-                        </div>
-                        <div className={"header-delete"}>
-                            <DeleteAllButton onDelete={() => handleDelete()} todo={todos.map((todo) => todo)} />
-                        </div>
+            <div className={"header"}>
+                <div className={"header-all"}>
+                    <div className={"header-check"}>
+                        <input type="checkbox" className={"check"} id="checkAll" name="checkAll" checked={allChecked}
+                               onChange={handleCheckAll}/>
+                        <label>All</label>
                     </div>
-                    <div className={"header-title"}>
-                        <h2>ToDos</h2>
-                    </div>
-                    <div className={"header-counter"}>
-                        <p className={"count"}>{countUnCHeck()} / {todos.length.toString().padStart(2, '0')}</p>
+                    <div className={"header-delete"}>
+                        <DeleteAllButton onDelete={() => handleDelete()} todo={todos.map((todo) => todo)}/>
                     </div>
                 </div>
+                <div className={"header-title"}>
+                    <h2>ToDos</h2>
+                </div>
+                <div className={"header-counter"}>
+                    <p className={"count"}>{countUnCHeck()} / {todos.length.toString().padStart(2, '0')}</p>
+                </div>
+            </div>
+            <ul className={"allTodo"}>
 
                 {todos.map((todo) => (
                     <>
@@ -117,7 +116,7 @@ function ToDoList() {
                             todo={todo}
                             onCheck={() => handleCheck(todo.id)}
                             onDelete={() => handleDelete(todo.id)}
-                            onEdit={()=> handleEdit(todo.id)}
+                            onEdit={() => handleEdit(todo.id)}
                             onUpdate={handleUpdate}
                             editing={todo.id === editingId}
                         />

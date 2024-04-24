@@ -1,4 +1,4 @@
-export default function DeleteButton({ onDelete, todo }) {
+export default function DeleteButton({ onDelete }) {
 
     return (
         <button className={"delete"} onClick={onDelete} >
